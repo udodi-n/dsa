@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=gambarino@400&f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap" rel="stylesheet">
+    <title>Demon Slayer Search</title>
+</head>
+<body>
+    <form action="/submit-data" method="POST" id="searchForm">
+        <input id="word-input" type="text" name="text" placeholder="Enter a character">
+        <button id="btn" type="submit">Find</button>
+    </form>
+    <div class="character-info">
+        <img src="" id="character-image" alt="">
+        <div class="main">
+            <h3 id="name"></h3>
+            <p id="description"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
