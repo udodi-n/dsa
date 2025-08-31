@@ -15,7 +15,8 @@ btn.addEventListener('click', async e => {
       if (wordInput.value === 'Chinazom') {
             characterName.textContent = 'Nlacahike Araoku'
             description.textContent = 'Omo, na idiot';
-            source.src = '../images/nlachaike.jpg'
+            source.src = 'https://i.ibb.co/XfDRm1nF/nlachaike.jpg'
+            return;
         }
 
     let totalPages = 9;
