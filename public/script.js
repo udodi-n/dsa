@@ -11,6 +11,13 @@ btn.addEventListener('click', async e => {
 
     let results = [];
     let query = wordInput.value.trim().toLowerCase();
+
+      if (wordInput.value === 'Chinazom') {
+            characterName.textContent = 'Nlacahike Araoku'
+            description.textContent = 'Omo, na idiot';
+            source.src = '/images/nlachaike.jpg'
+        }
+
     let totalPages = 9;
     
     try  {
@@ -19,12 +26,6 @@ btn.addEventListener('click', async e => {
             fetchPromises.push(
                 fetch(`https://dsa-production.up.railway.app/api/list?page=${i}`).then(res => res.json())
             );
-        }
-
-        if (wordInput.value === 'Chinazom') {
-            characterName.textContent = 'Nlacahike Araoku'
-            description.textContent = 'Omo, na idiot';
-            source.src = '/images/nlachaike.jpg'
         }
 
         const allData = await Promise.all(fetchPromises);
