@@ -24,7 +24,7 @@ btn.addEventListener('click', async e => {
         if (wordInput.value === 'Chinazom') {
             characterName.textContent = 'Nlacahike Araoku'
             description.textContent = 'Omo, na idiot';
-            source.src = 'images/nlachaike.jpg'
+            source.src = '/images/nlachaike.jpg'
         }
 
         const allData = await Promise.all(fetchPromises);
