@@ -1,6 +1,7 @@
 * {
     margin: 0;
-    padding: 0
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -9,48 +10,89 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    font-family: 'Satoshi', sans-serif;
 }
 
 #searchForm {
     position: absolute;
-    top: 5rem;
+    top: 5%;
+    display: flex;
+    gap: 0.5rem;
+    width: 90%;
+    max-width: 500px;
+}
+
+#searchForm input {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+#searchForm button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
 }
 
 .character-info {
     display: flex;
-    font-family: 'Satoshi', sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 90%;
-    height: 70%;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    max-width: 800px;
+    height: auto;
+    margin-top: 6rem;
+}
+
+#character-image {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
 }
 
 .main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
     align-items: center;
-    width: 80%;
-    height: 30%;
-    position: absolute;
-    bottom: 0;
-    color: black;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
 }
 
 #name {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 0.5rem;
 }
 
-#decription {
-    font-size: 1rem;
+#description {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.4;
 }
 
-#character-image {
-    width: 50%;
+@media (min-width: 768px) {
+    .character-info {
+        flex-direction: row;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    #character-image {
+        width: 50%;
+    }
+
+    .main {
+        width: 50%;
+        text-align: left;
+        align-items: flex-start;
+    }
 }
+G
