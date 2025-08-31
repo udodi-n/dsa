@@ -6,7 +6,7 @@ import cors from 'cors';
 const app = express();
 
 app.use(cors( {
-    origin: "http://localhost:3000/index.htm"
+    origin: "https://dsly.netlify.app"
 }))
 
 const __filename = url.fileURLToPath(import.meta.url);

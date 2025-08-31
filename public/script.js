@@ -17,7 +17,7 @@ btn.addEventListener('click', async e => {
         const fetchPromises = [];
         for (let i = 1; i <= totalPages; i++) {
             fetchPromises.push(
-                fetch(`/api/list?page=${i}`).then(res => res.json())
+                fetch(`https://dsa-production.up.railway.app/api/list?page=${i}`).then(res => res.json())
             );
         }
 
